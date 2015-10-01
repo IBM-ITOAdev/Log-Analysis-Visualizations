@@ -12,7 +12,7 @@ Ever want to create a new visualization or hack on one of the existing ones?  Ev
 
 ## Hacks: 
 
-* 10/1/15: Hate the color scheme for the OOTB heat map?  I sure do!  Use this updated heatmap.json chartspec to get a more proper heat map color scheme with the normal green to red transitions.
+* 10/1/15: Hate the color scheme for the OOTB heat map?  I sure do!  Use this updated [heatmap.json](https://github.com/IBM-ITOAdev/Log-Analysis-Visualizations/blob/master/heatmap.json) chartspec to get a more proper heat map color scheme with the normal green to red transitions.  Make a backup of your existing heatmap.json in another directory location and copy this one to your server.  You might need to clear your browser cache if it doesn't render properly the first time.
 
 
 ## Resources: 
