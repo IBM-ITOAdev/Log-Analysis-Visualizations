@@ -1,0 +1,157 @@
+{
+	"name": "Heat Map",
+	"label": "HeatMap",
+	"parameters": [{"name":"xaxis","type":"Axis","label":"xlabel"},{"name":"yaxis","type":"Axis","label":"ylabel"},{"name":"category","type":"Axis","datatype":"number"}],
+	"spec": {
+		"data": [],
+		"copyright": "(C) Copyright IBM Corp. 2011",
+		"grammar": [{
+		"bounds": {
+				"height": "78%",
+				"left": "0%",
+				"top": "20%",
+				"width": "100%"
+		},
+			"coordinates": {
+				"dimensions": [{
+					"axis": {
+						"title": [{
+							"$ref": "#yaxis#"
+						}],
+						"titleStyle": {
+							"font": {
+								"family": "Arial",
+								"size": "8.5pt"
+							}
+						},
+						"tickStyle": {
+							"font": {
+								"family": "Arial",
+								"size": "8.0pt"
+							}
+						},
+						"markStyle": {
+							
+						}
+					}
+				},
+				{
+					"axis": {
+						"title": [{
+							"$ref": "#xaxis#"
+						}],
+						"titleStyle": {
+							"font": {
+								"family": "Arial",
+								"size": "8.5pt"
+							}
+						},
+						"tickStyle": {
+							"font": {
+								"family": "Arial",
+								"size": "8.0pt"
+							}
+						},
+						"markStyle": {
+							
+						}
+					}
+				}]
+			},
+			"elements": [{
+				"tooltip": [{
+					"content": ["#category_label#: ",
+					{
+						"$ref": "#category#"
+					},
+					"\n#xaxis_label#: ",
+					{
+						"$ref": "#xaxis#"
+					},
+					"\n#yaxis_label#: ",
+					{
+						"$ref": "#yaxis#"
+					}]
+				}],
+				   "type": "point",
+          "position": [
+            {"field": {"$ref": "#yaxis#"}},
+            {"field": {"$ref": "#xaxis#"}}
+          ],
+          "color": [
+            {
+              "id": "colorId",
+              "field": {"$ref": "#category#"},
+			  "mapping": [
+                {
+                  "color": {"b": 26, "g": 150, "r": 65},
+                  "at": "0%"
+                },
+                {
+                  "color": {"b": 166, "g": 217, "r": 106},
+                  "at": "25%"
+                },
+                {
+                  "color": {"b": 191, "g": 255, "r": 255},
+                  "at": "50%"
+                },
+                {
+                  "color": {"b": 97, "g": 174, "r": 253},
+                  "at": "75%"
+                },
+                {
+                  "color": {"b": 28, "g": 25, "r": 215},
+                  "at": "100%"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "outline": {"b": 0, "g": 0, "r": 0},
+            "size": "100%",
+            "symbol": "rectangle"
+          }
+        }
+      ],
+      "style": {
+        "fill": {"b": 255, "g": 255, "r": 255},
+        "padding": 10
+      }
+    }
+  ],
+ "legendPosition": "top",
+  		"legends": [
+    		{
+      			"location": {
+					"height": "22%",
+					"left": "0%",
+					"top": 0,
+					"width": "100%"
+				},
+      			"itemStyle":{"width":7, "height":7},
+				"labelStyle": {
+					"font": {
+					   "family": "Arial",
+					   "size": "7.5pt"
+					}
+				 },
+      			"method": "swatch",
+        		"rows" : 3,
+         		"columns" : 4,
+         		"orientation": "horizontal",
+    			"content": [
+        			{	
+          				"aesthetics": [ {"aesthetic": {"$ref": "colorId"}} ],
+          				"layout": {"flow": "horizontal"}
+        			}
+      			],
+      			"style": {
+      			  "fill": "white",
+      		 	  "stroke": {"width": 0},
+        		  "outline": "black"
+     			 }
+   			 }
+ 		 ],
+  "version": "7.2"
+}
+}
