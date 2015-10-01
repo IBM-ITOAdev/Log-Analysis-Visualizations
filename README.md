@@ -12,5 +12,9 @@ Ever want to create a new visualization or hack on one of the existing ones?  Ev
 
 ## Hacks: 
 
-* Hate the color scheme for the OOTB heat map?  I sure do!  Use this updated heatmap.json chartspec to get a more proper heat map color scheme with the normal green to red transitions.
+* 10/1/15: Hate the color scheme for the OOTB heat map?  I sure do!  Use this updated heatmap.json chartspec to get a more proper heat map color scheme with the normal green to red transitions.
 
+
+## Resources: 
+
+* There are many references on the net related to RAVE visualizations used within Cognos.  Be cautious here as I'm not sure of the versions of RAVE used and how those might work or not within Log Analysis.  When I find some appropriate resources I'll add them here.
